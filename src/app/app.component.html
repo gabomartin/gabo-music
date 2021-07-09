@@ -6,12 +6,66 @@
 
   <span>Gabo Martin</span>
   <span class="spacer"></span>
-  <span>DJ | PRODUCTOR | OPERADOR DE SONIDO</span>
+
+  <a mat-raised-button color="black"  href="https://www.instagram.com/gabo.martin/" target="_blank">Instagram</a>
+  <a mat-raised-button color="black" href="https://facebook.com/GaboMartinMusic"  target="_blank">Facebook</a>
+
+  <!--<span>DJ | PRODUCTOR | OPERADOR DE SONIDO</span> -->
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav mode="side" [(opened)]="opened">Menu</mat-sidenav>
-  <mat-sidenav-content></mat-sidenav-content>
+  <mat-sidenav mode="over" [(opened)]="opened">
+
+    <div class="menu">
+
+
+      <ul>
+
+      <button (click)="sideOpen()" class="mitem" mat-button color="secondary">
+        Biografia
+      </button>
+
+      </ul>
+      <ul>
+
+      <button (click)="sideOpen();showDiv('music')" class="mitem" mat-button color="secondary">
+        Musica
+      </button>
+
+     </ul>
+      <ul>
+
+      <button (click)="sideOpen();showDiv('dj')" class="mitem" mat-button color="secondary">
+        DJ Sets
+      </button>
+
+     </ul>
+     <ul>
+
+      <button (click)="sideOpen();showDiv('out')" class="mitem" mat-button color="secondary">
+      Outsiders
+      </button>
+
+      </ul>
+
+    </div>
+
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+    <div *ngIf="currDiv == 'dj'">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/422840015&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div *ngIf="currDiv == 'music'">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/750472026&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div *ngIf="currDiv == 'out'">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1065543688&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+
+  </mat-sidenav-content>
 
 </mat-sidenav-container>
 

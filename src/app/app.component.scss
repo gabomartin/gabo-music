@@ -8,7 +8,18 @@
     height: 100%;
   }
 
-  .mat-sidenav, .mat-sidenav-content{
+  .mat-sidenav-content{
+    color: orange;
+    background-color: black;
+    background-image: url('./img/gabo.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    padding: 16px;
+  }
+
+  
+  .mat-sidenav{
     color: orange;
     background-color: black;
     padding: 16px;
@@ -16,5 +27,27 @@
 
   .mat-sidenav{
     background-color: rgba($color: #000000, $alpha: 0.80);
-    width: 20%;
+    //width: 20%;
+    width:250px;
   }
+
+  .mitem{
+    
+    
+    text-transform: uppercase;
+    font-size: 24px;
+    top: 50%;
+    right:30%;
+   
+    
+    
+    
+  }
+
+
+
+
+.menu{
+  position: absolute;
+  
+}
