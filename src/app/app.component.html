@@ -1,14 +1,24 @@
-<mat-toolbar color="primary">
-  <button (click)="sideOpen()" mat-icon-button color="secondary">
+<mat-toolbar color="">
+  <button matTooltip="menu" (click)="sideOpen()" mat-icon-button color="secondary">
     <mat-icon>menu</mat-icon>
+  </button>
+  <button matTooltip="home" (click)="showDiv('home')" mat-icon-button color="secondary">
+    <mat-icon>home</mat-icon>
   </button>
 
 
   <span>Gabo Martin</span>
   <span class="spacer"></span>
 
-  <a mat-raised-button color="black"  href="https://www.instagram.com/gabo.martin/" target="_blank">Instagram</a>
-  <a mat-raised-button color="black" href="https://facebook.com/GaboMartinMusic"  target="_blank">Facebook</a>
+  <a class="ico" matTooltip="Instagram" href="https://www.instagram.com/gabo.martin/" target="_blank">
+    <img  src="/assets/ig.png">
+  </a>
+  <a class="ico" matTooltip="Facebook"  href="https://facebook.com/GaboMartinMusic"  target="_blank">
+    <img src="/assets/fb.png">
+  </a>
+  <a class="ico" matTooltip="Twitter"  href="https://twitter.com/GaboMartinn"  target="_blank">
+    <img src="/assets/tw.png">
+  </a>
 
   <!--<span>DJ | PRODUCTOR | OPERADOR DE SONIDO</span> -->
 </mat-toolbar>
@@ -54,12 +64,17 @@
 
   </mat-sidenav>
   <mat-sidenav-content>
-    
-    <div *ngIf="currDiv == 'dj'">
+
+    <div *ngIf="currDiv == 'home'">
+
+    </div>
+
+    <div  *ngIf="currDiv == 'dj'">
       <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/422840015&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
     </div>
-    <div *ngIf="currDiv == 'music'">
+    <div  *ngIf="currDiv == 'music'">
       <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/750472026&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <iframe src="https://open.spotify.com/embed/artist/0lbM6GWkHSqGxStr0vdAwL?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     <div *ngIf="currDiv == 'out'">
       <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1065543688&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
@@ -68,9 +83,6 @@
   </mat-sidenav-content>
 
 </mat-sidenav-container>
-
-
-
 
 
 

@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
 
   title = 'gabo-music';
   opened:boolean = false;
   dj:boolean =false;
   music:boolean =false;
-  currDiv: string = "";
+  currDiv: string = 'home';
   sideOpen(){
     this.opened=this.opened==false?true:false;
   }
-  
+
 
   showDiv(divVal: string) {
     this.currDiv = divVal;

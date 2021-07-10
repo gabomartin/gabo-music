@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import 'hammerjs';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,14 +30,17 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    FormsModule
-    
+    FormsModule,
+    MatTooltipModule,
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
+export class AppModule {
+
 }
 
 
